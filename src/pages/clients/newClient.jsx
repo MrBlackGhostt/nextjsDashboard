@@ -8,7 +8,7 @@ const DynamicQuillComponent = dynamic(() => import('react-quill'), {
 })
 
 const NewClient = () => {
-  const [value, setValue] = useState('')
+  // const [value, setValue] = useState('')
   const [shouldRenderQuill, setShouldRenderQuill] = useState(false)
   useEffect(() => {
     setShouldRenderQuill(true) // This w
@@ -25,7 +25,7 @@ const NewClient = () => {
               console.log(values)
             }}
           >
-            {({ values }) => (
+            {({}) => (
               <Form>
                 <div className="grid md:grid-cols-2 gap-6 grid-cols-1 py-5">
                   <div>
@@ -108,7 +108,7 @@ const NewClient = () => {
                     </label>
                     {shouldRenderQuill && (
                       <DynamicQuillComponent
-                        onChange={setValue}
+                        // onChange={setValue}
                         className="w-full md:w-[200%] block border bg-white border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
                       />
                     )}
